@@ -8,10 +8,9 @@
 "   /:/  /   /:/  /  \/__/    \::/  /  |:\/__/   /:/  / 
 "   \/__/    \/__/             \/__/    \|__|    \/__/  
 "
-"
 " Name:       majora.vim
 " URL:        http://github.com/tbloncar/majora.vim
-" Author:     Travis Loncar
+" Author:     Travis Loncar <loncar.travis@gmail.com>
 " Lisence:    MIT
 "
 
@@ -29,15 +28,36 @@ let g:colors_name = "majora"
 " Yellow      #FFC72C
 " Green       #86D17E
 " Gray        #BBBBBB
-" Red         #452324
+" Red         #FF6A6A
 
-hi Normal       guifg=#999999 ctermfg=246
-hi Comment      guifg=#999999 ctermfg=246 guibg=NONE
-hi Cursor       guifg=#FFC72C ctermfg=220
-hi CursorLine   guifg=#FFC72C ctermfg=220
-hi LineNr       guifg=#D0712F ctermfg=166
+hi Normal       guifg=#CFCFCF ctermfg=252
+hi Comment      guifg=#999999 ctermfg=246 
+hi Cursor       guifg=#FCDC3B ctermfg=221
+hi CursorLine   guifg=#FCDC3B ctermfg=221
+hi Constant     guifg=#FCDC3B ctermfg=221
+hi LineNr       guifg=#999999 ctermfg=246
 hi Visual       guibg=#222222 ctermbg=235
-hi Search       guibg=#FFC72C ctermbg=220 guifg=#000000 ctermfg=0 gui=NONE
+hi Search       guibg=#FCDC3B ctermbg=221
 hi Title        guifg=#7F88B1 ctermfg=103
-hi Define       guifg=#452324 ctermfg=236
+hi Define       guifg=#FF6A6A ctermfg=203
+hi Keyword      guifg=#7F88B1 ctermfg=103
+hi Function     guifg=#86D17E ctermfg=114
+hi Type         guifg=#FCDC3B ctermfg=221
 
+" Ruby/Rails
+
+hi link rubyClass             Keyword
+hi link rubyDefine            Keyword
+hi link rubyConstant          Type
+hi link rubySymbol            Constant
+hi link rubyStringDelimiter   Define
+hi link rubyInclude           Keyword
+hi link rubyAttribute         Keyword
+hi link rubyInstanceVariable  Define
+hi link rubyMethodBlock       Normal
+hi link rubyBlockParameter    Constant
+hi link rubyControl           Function
+hi link rubyDoBlock           Keyword
+hi link rubyBlock             Keyword
+
+hi link railsMethod           Type
